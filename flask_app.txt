@@ -1,4 +1,5 @@
-Creating a simple Python web application using Flask is a great way to introduce students to web development on Linux. Flask is a micro web framework for Python that's easy to get started with. Below, I'll outline a basic Flask application that consists of three files:
+Using Flask is a great way to introduce you to web development on Linux. Flask is a micro web framework for Python that's easy to get started with.
+ Below, I'll outline a basic Flask application that consists of three files:
 
     app.py: This is the main application file.
     templates/index.html: A simple HTML template for the homepage.
