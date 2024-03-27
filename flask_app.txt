@@ -1,0 +1,90 @@
+Creating a simple Python web application using Flask is a great way to introduce students to web development on Linux. Flask is a micro web framework for Python that's easy to get started with. Below, I'll outline a basic Flask application that consists of three files:
+
+    app.py: This is the main application file.
+    templates/index.html: A simple HTML template for the homepage.
+    requirements.txt: Lists the Flask dependency.
+
+Step 1: Setup Your Environment
+
+First, ensure you have Python 3 installed on your Linux system. Then, create a directory for your project and navigate into it:
+
+bash
+
+mkdir flask_app
+cd flask_app
+
+Step 2: Create a Virtual Environment
+
+It's a good practice to use a Python virtual environment for your projects to manage dependencies.
+
+bash
+
+python3 -m venv venv
+source venv/bin/activate
+
+Step 3: Create requirements.txt
+
+Create a requirements.txt file to list your project dependencies. For now, this will only include Flask.
+
+plaintext
+
+Flask==2.0.1
+
+Install Flask using pip:
+
+bash
+
+pip install -r requirements.txt
+
+Step 4: Create app.py
+
+In the project root directory, create app.py:
+
+python
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+This code creates a Flask application that renders an HTML template (index.html) when navigating to the home page ('/').
+Step 5: Create the templates Directory and index.html
+
+Flask expects HTML templates to be in a folder named templates. Create this directory and add index.html inside it:
+
+bash
+
+mkdir templates
+
+Inside templates, create index.html:
+
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Flask</title>
+</head>
+<body>
+    <h1>Hello, Flask!</h1>
+    <p>Welcome to your first Flask application.</p>
+</body>
+</html>
+
+Step 6: Run Your Flask Application
+
+Back in the terminal, run your Flask application by executing:
+
+bash
+
+python app.py
+
+You'll see output indicating the server is running, typically on http://127.0.0.1:5000. Open this URL in your web browser to see your Flask application in action
